@@ -1,0 +1,28 @@
+h1 {
+  color:green;
+}
+p {
+  color:green;
+}
+ul {
+  li {
+    color:green;
+  }
+}
+ol {
+  li {
+    color:green;
+  }
+}
+a {
+    color:green;
+}
+a:link {
+  color:#82E0AA;
+}
+a:visited {
+  color:#2ECC71;
+}
+a:hover {
+  color:#1D8348;
+}
