@@ -5,8 +5,16 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Age Varible -->
     <script type="text/javascript">
+      // Age Calculation //
+      function calculateAge(birthday) { 
+        let currentTime = new Date().getTime();
+        let birthDateTime= new Date(birthday).getTime();
+        let difference = (currentTime - birthDateTime)
+        var ageInYears = difference/(1000*60*60*24*365)
+        return Math.floor(ageInYears);
+      }
       document.addEventListener("DOMContentLoaded", function(event) {
-        let age = "7";
+        let age = calculateAge('09 Oct 2016');
         const elem = document.getElementById("age");
         elem.innerText = age;
       });
