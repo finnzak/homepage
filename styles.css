@@ -1,3 +1,4 @@
+/* Text Colour */
 h1 {
   color:green;
 }
@@ -17,6 +18,7 @@ ol {
 a {
     color:green;
 }
+/* Link Colour */
 a:link {
   color:#82E0AA;
 }
@@ -26,6 +28,7 @@ a:visited {
 a:hover {
   color:#1D8348;
 }
+/* Sidebar Design */
 body {font-family: "Lato", sans-serif;}
 
 .sidebar {
