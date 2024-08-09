@@ -20,36 +20,6 @@
         elem.innerText = age;
       });
       $(function(){
-
-        // Automatic update, strange function
-        setTimeout(function(){
-          // Value updated automatically
-          $('#long').val("90.000");
-        }, 2000);
-        
-        /**
-         * Detect if that field is updated
-         */
-        $('input#long').on('change', function(){
-          alert("Updated");
-        });
-        
-        $(':input').on('change', function(){
-          alert("Updated");
-        });
-        
-        $('input#long').change(function(){
-          alert("Updated");
-        });
-        
-        $(document).on('change', 'input#long', function(){
-          alert("Updated");
-        });  
-        
-        $(document).on('change', 'input', function(){
-          alert("Updated");
-        });
-    });
 </script>      
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <input type="text" id="long">
