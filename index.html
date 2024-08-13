@@ -14,31 +14,10 @@
         var ageInYears = difference/(1000*60*60*24*365)
         return Math.floor(ageInYears);
       }
-      document.addEventListener("DOMContentLoaded", function(event) {
-        let age = calculateAge('09 Oct 2016');
-        const elem = document.getElementById("age");
-        elem.innerText = age;
-      });
-      if (document.readyState === "complete") {
-        // Fully loaded!
-        console.log("readyState", "complete");
+      function refreshPage() {
+       alert("Update To Get Newest Version");
       }
-      else if(document.readyState === "interactive") {
-        // DOM ready! Images, frames, and other subresources are still downloading.
-        console.log("readyState", "interactive");
-      }
-      else {
-          // Loading still in progress.
-          // To wait for it to complete, add "DOMContentLoaded" or "load" listeners.
-          window.addEventListener("DOMContentLoaded", () => {
-            // DOM ready! Images, frames, and other subresources are still downloading.
-            console.log("DOMContentLoaded");
-          });
-          window.addEventListener("load", () => {
-            // Fully loaded!
-            console.log("load");
-          });
-      }
+      setTimeout(refreshPage, 5000);
     </script>
     <!-- Sidebar Font -->    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
