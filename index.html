@@ -16,11 +16,11 @@
         return Math.floor(ageInYears);
       }
       function reloadPage() {
-        console.log("reloadPage");
+        console.log("reloadPage", Date.now());
         window.location.reload();
       }
       async function checkLastModified() {
-        console.log("checkLastModified");
+        console.log("checkLastModified", Date.now());
         const url = "https://finnzak.com";
         const response = await fetch(url, { method: "HEAD" });
         const modified = response.headers.get("Last-Modified");
