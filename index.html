@@ -14,11 +14,14 @@
         var ageInYears = difference/(1000*60*60*24*365)
         return Math.floor(ageInYears);
       }
-      function refreshPage() {
-       window.location.reload();
-      }
-      let seconds = 1 * 10000;
-      setTimeout(refreshPage, seconds);
+      // function refreshPage() {
+      //  window.location.reload();
+      // }
+      // let seconds = 1 * 10000;
+      // setTimeout(refreshPage, seconds);
+      let url = "https://finnzak.com";
+      const response = await fetch(url, { method: "HEAD" });
+      console.log("Reponse", response);
     </script>
     <!-- Sidebar Font -->    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
