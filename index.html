@@ -24,6 +24,7 @@
         const url = "https://finnzak.com";
         const response = await fetch(url, { method: "HEAD" });
         const modified = Date.parse(response.headers.get("Last-Modified"));
+        console.log("Modified", modified);
         if (lastModified = null) {
           lastModified = modified;
         }
