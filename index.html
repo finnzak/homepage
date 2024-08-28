@@ -23,6 +23,7 @@
         let url = "https://finnzak.com";
         const response = await fetch(url, { method: "HEAD" });
         console.log("Reponse", response);
+        console.log("Headers", response.headers.get("Last-Modified"))
       }
       checkResponse();
     </script>
