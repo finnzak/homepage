@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <!-- Age Varible -->
     <script type="text/javascript">
+      var lastModified = null;
       // Age Calculation //
       function calculateAge(birthday) { 
         let currentTime = new Date().getTime();
@@ -14,18 +15,23 @@
         var ageInYears = difference/(1000*60*60*24*365)
         return Math.floor(ageInYears);
       }
-      // function refreshPage() {
-      //  window.location.reload();
-      // }
-      // let seconds = 10 * 1000;
-      // setTimeout(refreshPage, seconds);
-      async function checkResponse() {
-        let url = "https://finnzak.com";
-        const response = await fetch(url, { method: "HEAD" });
-        console.log("Reponse", response);
-        console.log("Headers", response.headers.get("Last-Modified"))
+      function reloadPage() {
+        window.location.reload();
       }
-      checkResponse();
+      async function checkLastModified() {
+        const url = "https://finnzak.com";
+        const response = await fetch(url, { method: "HEAD" });
+        const modified = response.headers.get("Last-Modified");
+        if (lastModified = null) {
+          lastModified = modified;
+        }
+        else if (modified > lastModified) {
+          alert("Modified!");
+          reloadPage();
+        }
+      }
+      const seconds = 10 * 1000;
+      setTimeout(checkLastModified, seconds);
     </script>
     <!-- Sidebar Font -->    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
