@@ -25,7 +25,7 @@
         const response = await fetch(url, { method: "HEAD" });
         const header = response.headers.get("Last-Modified");
         console.log("Header", header);
-        const modified = Date.parse(modified);
+        const modified = Date.parse(header);
         console.log("Modified", modified);
         if (lastModified == null) {
           lastModified = modified;
