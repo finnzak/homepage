@@ -23,7 +23,7 @@
         console.log("checkLastModified", Date.now());
         const url = "https://finnzak.com";
         const response = await fetch(url, { method: "HEAD" });
-        const modified = response.headers.get("Last-Modified");
+        const modified = Date.parse(response.headers.get("Last-Modified"));
         if (lastModified = null) {
           lastModified = modified;
         }
