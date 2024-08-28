@@ -26,11 +26,15 @@
         const header = response.headers.get("Last-Modified");
         const modified = Date.parse(header);
         if (lastModified == null) {
+          console.log("No Modified", modified);
           lastModified = modified;
         }
         else if (modified > lastModified) {
           alert("Modified");
           reloadPage();
+        }
+        else {
+          console.log("Not Modified", lastModified, modified);
         }
       }
       const seconds = 10;
